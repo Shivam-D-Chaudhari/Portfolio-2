@@ -1,0 +1,36 @@
+#home .text p, #home .text .intro {
+    margin: 10px 0;
+    font-size: 2.5em; /* Increased font size */
+}
+
+#home h1 {
+    color: #add8e6; /* Light blue color for name */
+    font-size: 5em; /* Increased font size */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#home .social-media .social-btn {
+    padding: 10px 15px; /* Adjusted padding for larger buttons */
+    font-size: 1.5em; /* Slightly larger font size */
+}
+
+#home .resume-btn {
+    padding: 15px 30px; /* Adjusted padding for a larger button */
+    font-size: 2em; /* Larger font size */
+}
+
+#home .profile-pic-container {
+    width: 400px; /* Increased size */
+    height: 400px; /* Increased size */
+}
+
+#home .profile-pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+    border-radius: 50%; /* Round image */
+}
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f4; /* Light background for better contrast */
+        }
+
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        header {
+            background-color: #001f3f; /* Navy blue color for header */
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #001c39; /* Darker navy on hover */
+        }
+
+        .logo {
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #add8e6; /* Light blue hover effect */
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 20px 40px;
+            flex: 1;
+            background-color: #ffffff; /* White background for main content */
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            align-items: flex-start;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #home {
+            background-color: white;
+        }
+
+        #home .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px 0;
+            transform: translateY(40px);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #home:hover .content {
+            transform: translateY(0);
+        }
+
+        #home .text {
+            max-width: 50%;
+        }
+
+        #home .text p, #home .text .intro {
+            margin: 10px 0;
+            font-size: 2.5em;
+            transition: color 0.3s ease;
+        } 
+
+        #home h1 {
+            color: #76cbe7;
+            font-size: 5em;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        #home .social-media {
+            margin: 20px 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        #home .social-media .social-btn {
+            margin: 0 5px;
+            padding: 10px 15px;
+            background-color: #001f3f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.5em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #home .social-media .social-btn:hover {
+            background-color: #add8e6;
+            transform: translateY(-5px);
+        }
+
+        #home .resume-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            color: white;
+            background-color: #001f3f;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #home .resume-btn:hover {
+            background-color: #add8e6;
+            transform: scale(1.05);
+        }
+
+        #home .profile-pic-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #001f3f;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            margin-left: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        #home .profile-pic-container:hover {
+            transform: scale(1.1);
+        }
+
+        #home .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #about {
+            background-color: #d6eaf8;
+            padding: 20px 40px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        #about h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: black;
+            margin: 0;
+            padding-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        #about h1:hover {
+            color: #001f3f; /* Navy blue on hover */
+        }
+
+        #about .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #about .text {
+            max-width: 50%;
+            padding: 0 20px;
+            text-align: left;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #about .text h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: color 0.3s ease;
+        }
+
+        #about .text p {
+            margin: 10px 0;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        #about .profile-pic-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid #001f3f;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            margin-right: 20px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #about .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #projects {
+            background-color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #projects h1 {
+            font-size: 3em;
+            color: #001f3f; /* Navy blue color for title */
+            text-align: center;
+            margin-bottom: 40px;
+            transition: color 0.3s ease;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #d6eaf8; /* Light blue background for project cards */
+            border-radius: 10px;
+            padding: 20px;
+            width: 350px;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            background-color: #d6eaf8;
+            transform: scale(1.05);
+        }
+
+        .project-card h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #001f3f; /* Navy blue color for project titles */
+        }
+
+        .project-card p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .project-card a {
+            text-decoration: none;
+            color: #ffffff; /* Navy blue color for buttons */
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #001f3f; /* Light blue background for buttons */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #007bb5; /* Darker blue on hover */
+            transform: translateY(-2px);
+        }
+
+        #contact {
+            background-color: #d6eaf8;
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contact h1 {
+            font-size: 3em;
+            color: black;
+            margin: 0;
+            padding-bottom: 20px;
+        }
+
+        #contact {
+            background-color: #d6eaf8;
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contact form {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%; /* Use full width of the container */
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #001f3f;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+        #contact input[type="submit"] {
+            background-color: #001f3f;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 10px;
+            width: 100%; /* Use full width of the container */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
+
+
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            font-size: 1em;
+            position: relative;
+            bottom: 0;
+            width: 94.5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio.</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="content">
+                <div class="text">
+                    <p>Hello there. I am</p>
+                    <h1>Shivam Chaudhari</h1>
+                    <p>Web Developer and Website Designer.</p>
+                    <p>IT Enthusiast with Proficiency in UI/UX Design and Web Development.</p>
+                    <div class="social-media">                        
+                        <a href="https://github.com/Shivam-D-Chaudhari" class="social-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/shivam-chaudhari-43b539259/" class="social-btn">LinkedIn</a>
+                        <a href="https://www.instagram.com/_.sinu.ig_?igsh=eWMzeHVvemcwMW82" class="social-btn">Instagram</a>
+                    </div>
+                    <a href="21012021013_Shivam Chaudhari.pdf" class="resume-btn" target="_blank">View Resume</a>
+                </div>
+                <div class="profile-pic-container">
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h1>About Me</h1>
+            <div class="content">
+                <div class="profile-pic-container">
+                    <img src="profile.jpg" alt="Profile Picture">
+                </div>
+                <div class="text">
+                    <h2>UI/UX Designer and Web Developer</h2>
+                    <p>I'm a passionate UI/UX designer with a good foundation in HTML, CSS, JavaScript, and Python. As an intermediate web developer, I specialize in creating visually appealing and user-friendly interfaces. Using tools like Figma and VS Code, I strive to design and develop seamless user experiences that are both functional and responsive.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1>My Projects</h1>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h2>BookMyTable</h2>
+                    <p>Web Application (Group Project) | HTML, CSS, JS, PHP, MySQL</p>
+                    <p><strong>Role:</strong> Web-page designer, Database Handler</p>
+                    <p><strong>Brief:</strong> BookMyTable is a convenient online platform allowing users to easily reserve restaurant tables, providing seamless dining experiences.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+                <div class="project-card">
+                    <h2>boat-lifestyle.com</h2>
+                    <p>Replica (Personal Project) | using .NET</p>
+                    <p><strong>Brief:</strong> Created with .NET where you can view products, add products to the cart by selecting quantity, build bill of products etc.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+                <div class="project-card">
+                    <h2>To-Do List</h2>
+                    <p>(Personal Project) | using .NET</p>
+                    <p><strong>Brief:</strong> You can add tasks by schedule, check mark the done tasks, remove tasks etc.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+                <div class="project-card">
+                    <h2>Ferrari Website Prototypes</h2>
+                    <p>Working prototypes (Personal Project) | using Figma</p>
+                    <p><strong>Brief:</strong> Based on designing skills and animations skills.</p>
+                    <a href="https://www.figma.com/design/dMgkGjNQAmPPKTRfwBUy1W/All-Personals?node-id=0-1&t=U0HYVPblTYKv6RZw-1" class="view-btn">View</a>
+                </div>
+                <div class="project-card">
+                    <h2>Various Small Projects</h2>
+                    <p>(Personal Projects) | using HTML, CSS, JS, Python, Figma</p>
+                    <p><strong>Brief:</strong> Small projects like tic-tac-toe game using Python, puzzle game using Python, many working prototypes of different websites etc.</p>
+                    <a href="#" class="view-btn">View</a>
+                </div>
+                <div class="project-card">
+                    <h2>Personal Portfolio (Website)</h2>
+                    <p>(Personal Project) | using HTML, CSS, and JS</p>
+                    <p><strong>Brief:</strong> Showcasing a blend of web development skills, creative design expertise, and innovative projects.</p>
+                    <a href="https://shivam-d-chaudhari.github.io/shivam-portfolio/" class="view-btn">View</a>
+                </div>
+                <div class="project-card">
+                    <h2>Personal Portfolio (Figma)</h2>
+                    <p>(Personal Project) | using Figma</p>
+                    <p><strong>Brief:</strong> Created an animated portfolio website prototype in Figma, highlighting my design and web development skills.</p>
+                    <a href="https://www.figma.com/proto/CnACN5SrE2vpLDNCI24a4L/Portfolio?node-id=96-3&t=nMDtHGF2OX8fVHOK-1" class="view-btn">View</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <form action="mailto:shivam@example.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        © Shivam Chaudhari
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav ul li a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
