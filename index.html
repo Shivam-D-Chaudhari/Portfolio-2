@@ -339,8 +339,8 @@
         }
 
         .project-card a:hover {
-            background-color: #1c5c9b; /* Darker blue on hover */
-            transform: translateY(-2px);
+            background-color: #3276bb; /* Darker blue on hover */
+            transform: translateY(-5px);
         }
 
         #contact {
@@ -388,11 +388,17 @@
             color: white;
             border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for transform */
             padding: 10px;
             width: 100%; /* Use full width of the container */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
+
+        #contact input[type="submit"]:hover {
+            background-color: #3276bb; /* Darker blue on hover */
+            transform: translateY(-5px);
+        }
+
 
 
         footer {
