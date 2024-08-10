@@ -275,73 +275,173 @@
         }
 
         #projects {
-            background-color: white;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    background-color: white;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        #projects h1 {
-            font-size: 3em;
-            color: #001f3f; /* Navy blue color for title */
-            text-align: center;
-            margin-bottom: 40px;
-            transition: color 0.3s ease;
-        }
+#projects h1 {
+    font-size: 3em;
+    color: #001f3f; /* Navy blue color for title */
+    text-align: center;
+    margin-bottom: 40px;
+    transition: color 0.3s ease;
+}
 
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-        .project-card {
-            background-color: #d6eaf8; /* Light blue background for project cards */
-            border-radius: 10px;
-            padding: 20px;
-            width: 350px;
-            height: 270px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.project-card {
+    background-color: #d6eaf8; /* Light blue background for project cards */
+    border-radius: 10px;
+    width: 350px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title, info, and button */
+    align-items: center; /* Center content horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Position relative for absolute positioning of background image */
+    overflow: hidden; /* Hide overflow to keep the background image clean */
+    padding: 20px; /* Padding inside the card */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
-        .project-card:hover {
-            background-color: #9dd4fa;
-            transform: scale(1.05);
-        }
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Place behind text content */
+}
 
-        .project-card h3 {
-            margin: 0;
-            font-size: 1.5em;
-            color: #001f3f; /* Navy blue color for project titles */
-        }
+.project-card:hover::before {
+    opacity: 0.3; /* Slightly less transparent on hover */
+}
 
-        .project-card p {
-            font-size: 1em;
-            margin: 10px 0;
-        }
+.project-card h3,
+.project-card p,
+.project-card a {
+    position: relative; /* Position text above the background image */
+    z-index: 2;
+}
 
-        .project-card a {
-            text-decoration: none;
-            color: #ffffff; /* Navy blue color for buttons */
-            font-weight: bold;
-            text-align: center;
-            display: inline-block;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #001f3f; /* Light blue background for buttons */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.project-card h3 {
+    
+    font-size: 1.5em;
+    color: #001f3f; /* Navy blue color for project titles */
+    text-align: center; /* Center align title */
+    margin-top: 5px;
+}
 
-        .project-card a:hover {
-            background-color: #3276bb; /* Darker blue on hover */
-            transform: translateY(-5px);
-        }
+.project-card p {
+    font-size: 1em;
+    margin: 2px 0;
+    text-align: center; /* Center align text */
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #ffffff; /* White color for buttons */
+    font-weight: bold;
+    text-align: center;
+    text-justify: auto;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #001f3f; /* Navy blue background for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 5px; /* Add space between text and button */
+}
+
+.project-card a:hover {
+    background-color: #3276bb; /* Darker blue on hover */
+    transform: translateY(-5px);
+}
+
+/* Set background images for each project card */
+.project-card:nth-of-type(1)::before {
+    background-image: url('restaurant.jpg');
+}
+.project-card:nth-of-type(2)::before {
+    background-image: url('boat.jpg');
+}
+.project-card:nth-of-type(3)::before {
+    background-image: url('todo.jpg');
+}
+.project-card:nth-of-type(4)::before {
+    background-image: url('ferrari.jpg');
+}
+.project-card:nth-of-type(5)::before {
+    background-image: url('tic tac toe.jpg');
+}
+.project-card:nth-of-type(6)::before {
+    background-image: url('portfolio.jpg');
+}
+.project-card:nth-of-type(7)::before {
+    background-image: url('uiux 2.jpg');
+}
+
+.project-card h3,
+.project-card p,
+.project-card a {
+    position: relative; /* Position text above the background image */
+    z-index: 2;
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.project-card:hover h3,
+.project-card:hover p,
+.project-card:hover a {
+    opacity: 1; /* Show text on hover */
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #001f3f; /* Navy blue color for project titles */
+    text-align: center; /* Center align title */
+    margin-top: 5px;
+}
+
+.project-card p {
+    font-size: 1em;
+    margin: 2px 0;
+    text-align: center; /* Center align text */
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #ffffff; /* White color for buttons */
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    padding: 10px 135px;
+    border-radius: 5px;
+    background-color: #001f3f; /* Navy blue background for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 5px; /* Add space between text and button */
+}
+
+.project-card a:hover {
+    background-color: #3276bb; /* Darker blue on hover */
+    transform: translateY(-5px);
+}
+    
+
+
+
 
         #contact {
             background-color: #d6eaf8;
@@ -467,7 +567,7 @@
                     <h2>BookMyTable</h2>
                     <p>Web Application (Group Project) | HTML, CSS, JS, PHP, MySQL</p>
                     <p><strong>Role:</strong> Web-page designer, Database Handler</p>
-                    <p><strong>Brief:</strong> BookMyTable is a convenient online platform allowing users to easily reserve restaurant tables, providing seamless dining experiences.</p>
+                    <p><strong>Brief:</strong> BookMyTable is a convenient online platform allowing users to easily reserve restaurant tables.</p>
                     <a href="#" class="view-btn">View</a>
                 </div>
                 <div class="project-card">
