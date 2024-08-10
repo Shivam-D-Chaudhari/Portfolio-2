@@ -287,19 +287,19 @@
             color: #001f3f; /* Navy blue color for title */
             text-align: center;
             margin-bottom: 40px;
-            transition: color 0.3s ease;
+            transition: color 0.3 s ease;
         }
-        
+
         .projects-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
-        
+
         .project-card {
             background-color: #d6eaf8; /* Light blue background for project cards */
-            border-radius: 10px;
+            border-radius: 15px;
             width: 350px;
             height: 270px;
             display: flex;
@@ -311,8 +311,10 @@
             overflow: hidden; /* Hide overflow to keep the background image clean */
             padding: 20px; /* Padding inside the card */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: 3px solid #001f3f; /* Thin navy blue border */
         }
-        
+
+
         .project-card::before {
             content: "";
             position: absolute;
@@ -322,21 +324,21 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
             z-index: 1; /* Place behind text content */
         }
-        
+
         .project-card:hover::before {
-            opacity: 0.2; /* Slightly less transparent on hover */
+            opacity: 0.15; /* Slightly less transparent on hover */
         }
-        
+
         .project-card h3,
         .project-card p,
         .project-card a {
             position: relative; /* Position text above the background image */
             z-index: 2;
         }
-        
+
         .project-card h3 {
             
             font-size: 1.5em;
@@ -344,13 +346,13 @@
             text-align: center; /* Center align title */
             margin-top: 5px;
         }
-        
+
         .project-card p {
             font-size: 1em;
             margin: 2px 0;
             text-align: center; /* Center align text */
         }
-        
+
         .project-card a {
             text-decoration: none;
             color: #ffffff; /* White color for buttons */
@@ -364,12 +366,12 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             margin-top: 5px; /* Add space between text and button */
         }
-        
+
         .project-card a:hover {
             background-color: #3276bb; /* Darker blue on hover */
             transform: translateY(-5px);
         }
-        
+
         /* Set background images for each project card */
         .project-card:nth-of-type(1)::before {
             background-image: url('restaurant.jpg');
@@ -392,7 +394,7 @@
         .project-card:nth-of-type(7)::before {
             background-image: url('uiux 2.jpg');
         }
-        
+
         .project-card h3,
         .project-card p,
         .project-card a {
@@ -401,26 +403,26 @@
             opacity: 0; /* Hide text by default */
             transition: opacity 0.3s ease; /* Smooth transition for visibility */
         }
-        
+
         .project-card:hover h3,
         .project-card:hover p,
         .project-card:hover a {
             opacity: 1; /* Show text on hover */
         }
-        
+
         .project-card h3 {
             font-size: 1.5em;
             color: #001f3f; /* Navy blue color for project titles */
             text-align: center; /* Center align title */
             margin-top: 5px;
         }
-        
+
         .project-card p {
             font-size: 1em;
             margin: 2px 0;
             text-align: center; /* Center align text */
         }
-        
+
         .project-card a {
             text-decoration: none;
             color: #ffffff; /* White color for buttons */
@@ -433,11 +435,12 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
             margin-top: 5px; /* Add space between text and button */
         }
-        
+
         .project-card a:hover {
             background-color: #3276bb; /* Darker blue on hover */
             transform: translateY(-5px);
         }
+    
         #contact {
             background-color: #d6eaf8;
             padding: 20px 40px;
