@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -134,21 +135,31 @@
             justify-content: flex-start;
         }
 
+                #home .social-media {
+            margin: 20px 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+
         #home .social-media .social-btn {
             margin: 0 5px;
-            padding: 10px 15px;
+            padding: 10px;
             background-color: #001f3f;
             color: white;
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.5em;
+            border-radius: 50%;
+            font-size: 2em; /* Adjusted for larger icons */
             transition: background-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #home .social-media .social-btn:hover {
             background-color: #add8e6;
             transform: translateY(-5px);
         }
+
 
         #home .resume-btn {
             display: inline-block;
@@ -536,10 +547,18 @@
                     <h1>Shivam Chaudhari</h1>
                     <p>Web Developer and Website Designer.</p>
                     <p>IT Enthusiast with Proficiency in UI/UX Design and Web Development.</p>
-                    <div class="social-media">                        
-                        <a href="https://github.com/Shivam-D-Chaudhari" class="social-btn">GitHub</a>
-                        <a href="https://www.linkedin.com/in/shivam-chaudhari-43b539259/" class="social-btn">LinkedIn</a>
-                        <a href="https://www.instagram.com/_.sinu.ig_?igsh=eWMzeHVvemcwMW82" class="social-btn">Instagram</a>
+                    <div id="home" class="container">
+                        <div class="social-media">
+                            <a href="https://github.com/Shivam-D-Chaudhari" class="social-btn">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shivam-chaudhari-43b539259/" class="social-btn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com/_.sinu.ig_" class="social-btn">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                     <a href="21012021013_Shivam Chaudhari.pdf" class="resume-btn" target="_blank">View Resume</a>
                 </div>
@@ -588,7 +607,7 @@
                     <h2>Ferrari Website Prototypes</h2>
                     <p>Working prototypes (Personal Project) | using Figma</p>
                     <p><strong>Brief:</strong> Based on designing skills and animations skills.</p>
-                    <a href="https://www.figma.com/design/dMgkGjNQAmPPKTRfwBUy1W/All-Personals?node-id=0-1&t=U0HYVPblTYKv6RZw-1" class="view-btn">View</a>
+                    <a href="https://shivam-d-chaudhari.github.io/My-Link-tree/" class="view-btn">View</a>
                 </div>
                 <div class="project-card">
                     <h2>Various Small Projects</h2>
