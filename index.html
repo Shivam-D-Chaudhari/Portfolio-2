@@ -102,7 +102,7 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            padding: 20px 0;
+            padding: 0;
             transform: translateY(40px);
             transition: transform 0.5s ease-in-out;
         }
@@ -112,7 +112,7 @@
         }
 
         #home .text {
-            max-width: 50%;
+            max-width: 60%;
         }
 
         #home .text p, #home .text .intro {
@@ -227,14 +227,10 @@
         #about h1 {
             font-size: 3em;
             font-weight: bold;
-            color: black;
+            color: #001f3f;
             margin: 0;
             padding-bottom: 20px;
             transition: color 0.3s ease;
-        }
-
-        #about h1:hover {
-            color: #001f3f; /* Navy blue on hover */
         }
 
         #about .content {
@@ -528,7 +524,7 @@
 </head>
 <body>
     <header>
-        <div class="logo">Portfolio.</div>
+        <div class="logo" style="margin: 0 25px;">Portfolio.</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -544,9 +540,9 @@
             <div class="content">
                 <div class="text">
                     <p>Hello there! I am</p>
-                    <h1>Shivam Chaudhari</h1>
-                    <p>Web Developer and Website Designer.</p>
-                    <p>IT Enthusiast with Proficiency in UI/UX Design and Web Development.</p>
+                    <h1 style="font-family: Monaco, monospace; font-weight: bold;">Shivam Chaudhari</h1>
+                    <p>Ui/Ux Designer And Web Developer.</p>
+                    <p style="font-family: Monaco, monospace; font-size: 1.5em; max-width: 60%; text-align: justify;">IT Enthusiast with Proficiency in Ui/Ux design, Web development and 3D Interactive Model designing.</p>
                     <div id="home" class="container">
                         <div class="social-media">
                             <a href="https://github.com/Shivam-D-Chaudhari" class="social-btn">
@@ -575,8 +571,8 @@
                     <img src="profile.jpg" alt="Profile Picture">
                 </div>
                 <div class="text">
-                    <h2>UI/UX Designer and Web Developer</h2>
-                    <p>I'm a passionate UI/UX designer with a good foundation in HTML, CSS, JavaScript, and Python. As an intermediate web developer, I specialize in creating visually appealing and user-friendly interfaces. Using tools like Figma and VS Code, I strive to design and develop seamless user experiences that are both functional and responsive.</p>
+                    <h2 style="max-width: 100%; font-size: 2.2em; color: #001f3f;">UI/UX Designer and Web Developer</h2>
+                    <p style="font-family: Monaco, monospace; font-size: 1.4em; max-width: 100%; text-align: justify;">I'm a passionate UI/UX designer with a good foundation in HTML, CSS, JavaScript, and Python. As an intermediate web developer, I specialize in creating visually appealing and user-friendly interfaces. Using tools like Figma and VS Code, I strive to design and develop seamless user experiences that are both functional and responsive.</p>
                 </div>
             </div>
         </section>
@@ -593,27 +589,42 @@
                 </div>
                 <div class="project-card">
                     <h2>boat-lifestyle.com</h2>
-                    <p>Replica (Personal Project) | using .NET</p>
+                    <p>Replica | using .NET</p>
                     <p><strong>Brief:</strong> Created with .NET where you can view products, add products to the cart by selecting quantity, build bill of products etc.</p>
-                    <a href="#" class="view-btn">View</a>
+                    <a href="#" class="view-btn" onclick="showPopup()">View</a>
+                    <script>
+                        function showPopup() {
+                            alert("Oops :( \nThe project is not hosted yet.");
+                        }
+                    </script>
                 </div>
                 <div class="project-card">
                     <h2>To-Do List</h2>
-                    <p>(Personal Project) | using .NET</p>
-                    <p><strong>Brief:</strong> You can add tasks by schedule, check mark the done tasks, remove tasks etc.</p>
-                    <a href="#" class="view-btn">View</a>
+                    <p> using .NET</p>
+                    <p><strong>Brief:</strong> Organize and prioritize your tasks effortlessly with this sleek and user-friendly To-Do List application.</p>
+                    <a href="#" class="view-btn" onclick="showPopup()">View</a>
+                    <script>
+                        function showPopup() {
+                            alert("Oops :( \nThe project is not hosted yet.");
+                        }
+                    </script>
                 </div>
                 <div class="project-card">
                     <h2>Ferrari Website Prototypes</h2>
-                    <p>Working prototypes (Personal Project) | using Figma</p>
-                    <p><strong>Brief:</strong> Based on designing skills and animations skills.</p>
+                    <p>Working prototypes | using Figma</p>
+                    <p><strong>Brief:</strong> Designed interactive website prototypes with engaging animations and transitions in Figma.</p>
                     <a href="https://shivam-d-chaudhari.github.io/My-Link-tree/" class="view-btn">View</a>
                 </div>
                 <div class="project-card">
                     <h2>Various Small Projects</h2>
-                    <p>(Personal Projects) | using HTML, CSS, JS, Python, Figma</p>
+                    <p> | using HTML, CSS, JS, Python, Figma</p>
                     <p><strong>Brief:</strong> Small projects like tic-tac-toe game using Python, puzzle game using Python, many working prototypes of different websites etc.</p>
-                    <a href="#" class="view-btn">View</a>
+                    <a href="#" class="view-btn" onclick="showPopup()">View</a>
+                    <script>
+                        function showPopup() {
+                            alert("Oops :( \nThe project is not hosted yet.");
+                        }
+                    </script>
                 </div>
                 <div class="project-card">
                     <h2>Personal Portfolio (Website)</h2>
