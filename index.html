@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Shivam's Portfolio</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Times New Roman', serif;
@@ -36,6 +37,7 @@
         }
 
         .logo {
+            font-family: Tahoma, monospace;
             color: white;
             font-weight: bold;
             font-size: 2em;
@@ -58,6 +60,7 @@
         }
 
         nav ul li a {
+            font-family: Tahoma, monospace;
             text-decoration: none;
             font-size: 1.3em;
             color: white;
@@ -610,22 +613,22 @@
         </section>
 
         <section id="about">
-            <h1>About Me</h1>
+            <h1 style="font-family: Tahoma, monospace;">About Me</h1>
             <div class="content">
                 <div class="profile-pic-container">
                     <img src="profile.jpg" alt="Profile Picture">
                 </div>
                 <div class="text">
-                    <h2 style="max-width: 100%; font-size: 2.2em; color: #001f3f;">UI/UX Designer and Web Developer</h2>
+                    <h2 style="font-weight:bold ; font-family: Tahoma, monospace; max-width: 100%; font-size: 2.07em; color: #001f3f;">UI/UX Designer and Web Developer</h2>
                     <p style="font-family: Tahoma, monospace; font-size: 1.4em; max-width: 100%; text-align: justify;">I'm a passionate UI/UX designer skilled in Figma, Spline, HTML, CSS, JS, Python, and C. As an intermediate web developer, I create visually appealing, user-friendly interfaces. With tools like Figma and VS Code, I strive to develop seamless, responsive user experiences.</p>
-                    <div style="display: flex; gap: 50px; padding-top: 10px; color: #000000;">
-                        <i class="fab fa-figma" style="font-size: 50px;"></i>
-                        <img src="spline.png" alt="Spline" style="height: 55px;">
-                        <i class="fab fa-html5" style="font-size: 50px;"></i>
-                        <i class="fab fa-css3-alt" style="font-size: 50px;"></i>
-                        <i class="fab fa-js-square" style="font-size: 50px;"></i>
-                        <i class="fab fa-python" style="font-size: 50px;"></i>
-                        <img src="C.png" alt="C Language" style="height: 45px;">
+                    <div style="display: flex; gap: 56px; padding-top: 10px; color: #000000;">
+                        <i class="fab fa-figma" style="font-size: 45px;"></i>
+                        <img src="spline.png" alt="Spline" style="height: 50px;">
+                        <i class="fab fa-html5" style="font-size: 45px;"></i>
+                        <i class="fab fa-css3-alt" style="font-size: 45px;"></i>
+                        <i class="fab fa-js-square" style="font-size: 45px;"></i>
+                        <i class="fab fa-python" style="font-size: 45px;"></i>
+                        <img src="C.png" alt="C Language" style="height: 40px;">
                         <!-- Add the rest of your icons similarly -->
                     </div>
                 </div>
@@ -633,11 +636,11 @@
         </section>
 
         <section id="projects">
-            <h1>My Projects</h1>
+            <h1><span style="font-family: Tahoma, monospace;">My </span><span style="font-family: Tahoma, monospace; color: #76cbe7;">Projects</span></h1>
             <div class="projects-container">
                 <div class="project-card">
                     <h2>BookMyTable</h2>
-                    <p>Web Application (Group Project) | HTML, CSS, JS, PHP, MySQL</p>
+                    <p style="text-align: center">Web Application (Group Project) | HTML, CSS, JS, PHP, MySQL</p>
                     <p style="text-align: justify;"><strong>Role:</strong> Web-page designer and Database creator.</p>
                     <p style="text-align: justify;"><strong>Brief:</strong> BookMyTable is a online platform allowing users to easily reserve tables.</p>
                     <a href="https://github.com/Shivam-D-Chaudhari/bookmytable" class="view-btn">View</a>
@@ -645,7 +648,7 @@
                 <div class="project-card">
                     <h2>boat-lifestyle.com</h2>
                     <p>Replica | using .NET</p>
-                    <p><strong>Brief:</strong> Created with .NET where you can view products, add products to the cart by selecting quantity, build bill of products etc.</p>
+                    <p style="text-align: justify;"><strong>Brief:</strong> Developed using .NET, this application allows users to browse products, add selected quantities to the cart, and generate a detailed bill for their purchases.</p>
                     <a href="#" class="view-btn" onclick="showPopup()">View</a>
                     <script>
                         function showPopup() {
@@ -703,7 +706,7 @@
         </section>
 
         <section id="contact">
-            <h1>Contact Me</h1>
+            <h1 style="font-family: Tahoma, monospace;">Contact Me</h1>
             <form action="mailto: shivamchaudhari21@gnu.ac.in" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
